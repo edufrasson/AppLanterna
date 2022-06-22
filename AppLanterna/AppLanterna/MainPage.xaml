@@ -3,19 +3,41 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppLanterna.MainPage">
 
-    <StackLayout>
-        <StackLayout x:Name="title-container">
-            <Label x:Name="label_title"  Text="LANTERNA"/>
-        </StackLayout>
-        
-        <ImageButton/>
 
         <Grid
-            RowDefinitions="*, *, *"
-            ColumnDefinitions="*, *"
-            >
+        BackgroundColor="#232323"
+        RowDefinitions="150, 200, *, *, *"
+         ColumnDefinitions="*, *"
+        >
+
+            <StackLayout x:Name="TitleContainer" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
+                <Label x:Name="label_title"  Text="LANTERNA" Style="{StaticResource lblTitulo}"/>
+            </StackLayout>
+
+        <Button 
+            Grid.Row="1"
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            x:Name="btnOnOff"
+            Text="Ligar"
             
-        </Grid>
-    </StackLayout>
+            Style="{StaticResource btnToggle}"
+            Clicked="Button_Clicked"
+           />
+
+        <Label Grid.Row="3" Grid.Column="0" Style="{StaticResource textoCinza}" Text="Bateria Restante: "/>
+        <Label Grid.Row="4" Grid.Column="0" Style="{StaticResource textoCinza}" Text="Status Bateria: "/>
+        <Label Grid.Row="5" Grid.Column="0" Style="{StaticResource textoCinza}" Text="Fonte de energia: "/>
+
+
+        <Label Grid.Row="3" Grid.Column="1" Style="{StaticResource textoBranco}" x:Name="lbl_porcentagem_restante"/>
+        <Label Grid.Row="4" Grid.Column="1" Style="{StaticResource textoBranco}" x:Name="lbl_status"/>
+        <Label Grid.Row="5" Grid.Column="1" Style="{StaticResource textoBranco}" x:Name="lbl_fonte_carregamento"/>
+
+        <Label Grid.Row="6" Grid.Column="0" x:Name="lbl_bateria_fraca" Style="{StaticResource textoBranco}"/>
+
+    </Grid>
+
+
 
 </ContentPage>
