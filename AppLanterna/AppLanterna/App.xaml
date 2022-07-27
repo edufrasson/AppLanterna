@@ -8,7 +8,7 @@
                 <Setter Property="FontSize" Value="50"/>
                 <Setter Property="HorizontalTextAlignment" Value="Center"/>
                 <Setter Property="Padding" Value="15"/>
-                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="TextColor" Value="Black"/>
             </Style>
 
             <Style x:Key="btnToggle" TargetType="Button">
@@ -26,7 +26,7 @@
 
             <Style x:Key="textoBranco" TargetType="Label">
                 <Setter Property="FontSize" Value="16"/>
-                <Setter Property="TextColor" Value="White" />
+                <Setter Property="TextColor" Value="Black" />
             </Style>
         </ResourceDictionary>
     </Application.Resources>

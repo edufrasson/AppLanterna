@@ -5,7 +5,7 @@
 
 
         <Grid
-        BackgroundColor="#232323"
+        BackgroundColor="white"
         RowDefinitions="150, 200, *, *, *"
          ColumnDefinitions="*, *"
         >
@@ -14,16 +14,18 @@
                 <Label x:Name="label_title"  Text="LANTERNA" Style="{StaticResource lblTitulo}"/>
             </StackLayout>
 
-        <Button 
+        <ImageButton
             Grid.Row="1"
             Grid.Column="0"
             Grid.ColumnSpan="2"
-            x:Name="btnOnOff"
-            Text="Ligar"
-            
-            Style="{StaticResource btnToggle}"
+            MinimumHeightRequest="360"
+            MinimumWidthRequest="821"
+            VerticalOptions="Start"
+            HorizontalOptions="Center"
+            Aspect="AspectFill"
             Clicked="Button_Clicked"
-           />
+            x:Name="btnOnOff"
+            />
 
         <Label Grid.Row="3" Grid.Column="0" Style="{StaticResource textoCinza}" Text="Bateria Restante: "/>
         <Label Grid.Row="4" Grid.Column="0" Style="{StaticResource textoCinza}" Text="Status Bateria: "/>

@@ -24,7 +24,7 @@ namespace AppLanterna
 
             Carrega_Informacoes_Bateria();
 
-            btnOnOff.BackgroundColor = Color.Red;
+            btnOnOff.Source = ImageSource.FromResource("AppLanterna.Images.botao_desligado.png");
         }
 
         private async void Button_Clicked(object sender, EventArgs e)
@@ -35,7 +35,7 @@ namespace AppLanterna
                 {
                     lanterna_ligada = true;
 
-                    btnOnOff.BackgroundColor = Color.Green;
+                    btnOnOff.Source = ImageSource.FromResource("AppLanterna.Images.botao_aceso.png") ;
 
                     await Flashlight.TurnOnAsync();
 
@@ -44,14 +44,14 @@ namespace AppLanterna
                 {
                     lanterna_ligada = false;
 
-                    btnOnOff.BackgroundColor = Color.Red;
+                    btnOnOff.Source = ImageSource.FromResource("AppLanterna.Images.botao_desligado.png");
 
                     await Flashlight.TurnOffAsync();
                 }
             }
             catch(Exception ex)
             {
-                DisplayAlert("Erro", ex.Message, "OK");
+                await DisplayAlert("Erro", ex.Message, "OK");
             }
         }
 

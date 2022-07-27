@@ -11,15 +11,16 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Images\off.png" />
+    <None Remove="Images\botao_aceso.png" />
+    <None Remove="Images\botao_desligado.png" />
     <None Remove="Images\on.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="Images\off.png">
+    <EmbeddedResource Include="Images\botao_aceso.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="Images\on.png">
+    <EmbeddedResource Include="Images\botao_desligado.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>
