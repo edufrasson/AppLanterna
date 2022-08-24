@@ -11,7 +11,7 @@
         >
 
             <StackLayout x:Name="TitleContainer" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
-                <Label x:Name="label_title"  Text="LANTERNA" Style="{StaticResource lblTitulo}"/>
+                <Label x:Name="label_title"  Text="LANTERNA" Style="{StaticResource titulo}"/>
             </StackLayout>
 
         <ImageButton
